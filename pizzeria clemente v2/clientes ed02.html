@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang=es>
+<head>
+<meta charset="UTF-8">
+<title>Pizzeria Clemente clientes</title>
+<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+<style>
+
+header {
+  background-color: #A9A9A9;
+  padding: 30px;
+  text-align: right;
+  font-size: 35px;
+  color: green;
+   font-style: italic;
+}
+
+div {
+  background-color: #DCDCDC;
+  padding: 30px;
+  text-align: left;
+   color: black;
+}
+nav {
+  width: 100%;
+  height: 50px; 
+  background: #708090;
+  padding: 20px;
+  text-align: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  text-align: center;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #DCDCDC;
+  }
+
+section:after {
+  content: "";
+  display: table;
+  text-align: center;
+}
+
+footer {
+  background-color: #A9A9A9;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.left {
+  float: left;
+  width: 20%;
+} 
+
+</style>
+
+
+</head>
+<body>
+<!-- cabecera -->
+<header>
+  <img class="left" src="recursos_PR1/multimedia/img/logo_clemente.jpg" alt="Logo_clemente"/>
+   <h1>Pizzería Clemente</h1>
+   
+ <a href="https://www.facebook.com/" target="_blank"><div class="fcbkicon"></div></a> 
+
+<a href="https://www.instagram.com/" target="_blank"><div class="instaicon"></div></a>
+
+<a href="https://twitter.com/" target="_blank"><div class="twtericon"></div></a>
+
+<a href="https://www.pinterest.es/" target="_blank"><div class="pinticon"></div></a>
+
+</header>
+<!-- menu navegacion -->
+
+<section>
+  <nav>
+     <table align="center">   
+     <tr>
+     <th> <a href="index ed02.html" target="_blank">Inicio </a> </th>
+     <th> <a href="carta ed02.html" target="_blank">Carta de Pizzería Clemente </a> </th>
+     <th> <a href="elaboracion ed02.html" target="_blank">Elaboración de nuestras Pizzas</a> </th>
+     <th> <a href="clientes ed02.html" target="_blank">Area de clientes</a> </th>
+     <th> <a href="receta ed02.html" target="_blank">Receta de nuestras pizzas</a> </th>
+     <th> <a href="ofertas.html" target="_blank">Ofertas</a> </th>
+
+     </tr>
+     </table>
+  </nav>
+</section>  
+
+<section>
+<div>
+<h1>AREA DE CLIENTES PIZZERÍA CLEMENTE</h1>
+<br>
+<h2>IDENFIFICARSE</h2>
+</div>
+<div>
+  <form id="formulario">
+  <label for="correo">Correo Electrónico:</label>
+  <input class="tooltip" type="text" id="correo" name="correo" placeholder="Tu correo">
+  <label for="password">Password:</label>
+  <input class="tooltip" type="text" id="password" name="password" placeholder="Contraseña">
+   <input id=boton type="submit" value="Entrar">
+</form>
+</div>
+<hr>
+</section>  
+
+<div>
+<h2>Registrarse como nuevo cliente</h2>
+</div>
+
+<div>
+  <p>Completa y envía el siguiente formulario para registrarte en nuestra web</p>
+<br>
+<form id="formulario" action="#">
+  <table >
+    <tr>
+      <th>Nombre</th>
+      <td><input type="text" name="nombre" size="50" maxlength="100"></td>
+    </tr>
+    <tr>
+      <th>Apellidos</th>
+      <td><input type="text" name="apellidos" size="50" maxlength="100"></td>
+    </tr>
+    <tr>
+      <th>Correo Electronico</th>
+      <td><input type="text" name="email" size="50" maxlength="100"></td>
+    </tr>
+    <tr>
+      <th>Teléfono</th>
+      <td><input type="text" name="telefono" size="50" maxlength="100"></td>
+    </tr>
+    <tr>
+      <th>Direccion Completa</th>
+      <td><input type="text" name="direccion" size="50" maxlength="100"></td>
+    </tr>
+    <tr>
+      <th>Código Postal</th>
+      <td><input type="text" name="codigopostal" size="50" maxlength="100"></td>
+    </tr>
+    <tr>
+      <th>Provincia</th>
+      <td>
+        <select name="provincia">
+        <option selected="selected">Pontevedra</option>
+        <option>A Coruña</option>
+        <option>Lugo</option>
+        <option>Ourense</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Cómo nos has conocido</p>
+  <p><input name="recomendacion" type="radio" value="amistad">por recomendación de amistad</p>
+  <p><input name="recomendacion" type="radio" value="redessociales">redes sociales</p>
+  <p><input name="recomendacion" type="radio" value="prensa">prensa</p>
+
+ <input id=sinborde type="checkbox" id="acepto" name="acepto" value="condicionesprivacidadacepto">
+  <label for="acepto"> Acepto y conozco las condiciones de privacidad para registrarme en esta web  </label><input id=boton type="submit" value="Enviar">
+
+</form>
+</div>
+<hr>
+ 
+<footer>
+  <p>Jesús Bejo Santiago <br> Desenvolvemento de Aplicacións Multiplataforma <br> Linguaxes de Marcas e Sistemas de Xestión de Información</p>
+</footer>
+
+</body>
+<!-- 
+   ___                     ______      _       _    _      _     
+  |_  |                    | ___ \    (_)     | |  | |    | |    
+    | | ___  ___ _   _ ___ | |_/ / ___ _  ___ | |  | | ___| |__  
+    | |/ _ \/ __| | | / __|| ___ \/ _ \ |/ _ \| |/\| |/ _ \ '_ \ 
+/\__/ /  __/\__ \ |_| \__ \| |_/ /  __/ | (_) \  /\  /  __/ |_) |
+\____/ \___||___/\__,_|___/\____/ \___| |\___/ \/  \/ \___|_.__/ 
+                                     _/ |                        
+                                    |__/                         
+ -->
+</html>

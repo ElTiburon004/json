@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!-- 
+// https://www.youtube.com/watch?v=wZW4dhxRu-k//       
+ -->
+
+ <HTML lang="es">
+
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8887/css/estiloTablaJson.css"/>
+    </head>
+
+</head>
+<style>
+
+  .left {
+  float: left;
+  width: 10%;
+} 
+
+</style>
+
+<body>
+    <header>
+        <a href="https://www.json.org/json-es.html"><image class="left" src="http://127.0.0.1:8887/logoJSON.jpg" alt="Logo_JSON"/></a>
+        
+        <h3>TAREA PR01 JSON EXERCICIO 1</h3>
+    </header>
+    <br>
+    <hr>
+
+    <section>
+        <nav>
+          <p>Paxina web de lectura de datos JSON</p>
+           
+        </nav>
+
+      </section>  
+    <div class="container">
+        <button class="button" onclick = "ajax_get_json()">Cargar datos JSON</button>
+<br>
+<br>
+        <h2>Ejemplo AJAX y JSON</h2> 
+        <div id="contenido"> 
+            <button type="button" onclick="loadJSON()">Cargar JSON</button> 
+        </div>
+        
+        <script> function loadJSON() { 
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+         if (this.readyState == 4 && this.status == 200) { 
+             DibujarContenido(this.responseText); 
+         }
+                };
+                xhttp.open("GET", "colores.json", true); 
+                xhttp.send();
+            } 
+            function DibujarContenido(datos) {
+                //datos en formato JSON
+                var objeto = JSON.parse(datos);
+                var html=""; 
+                //recorreomos el objeto y creamos el html necesario 
+                for (i = 0; i < objeto.colores.length; i++) { 
+                    html=html + "<div class='box' style='background:" + 
+                        objeto.colores[i].codificacion.hex + ";'>";
+                    html=html + objeto.colores[i].color +"<br/>";
+                    html=html + objeto.colores[i].categoria +"<br/>"; 
+                    html=html + objeto.colores[i].tipo +"<br/>"; 
+                    html=html + "rgba:" + 
+                        objeto.colores[i].codificacion.rgba +"<br/>"; 
+                    html=html + "hex:" + objeto.colores[i].codificacion.hex;
+                    html=html + "</div>";
+                } 
+                //volcamos el html en su sitio del DOM
+                document.getElementById("contenido").innerHTML = html; 
+            } 
+        </script>   
+            
+            
+            
+            
+            
+            
+<br>
+        <div class="section">
+          
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Codigo Estación</th>
+                        <th>Lugar Estación</th>
+                        <th>Provincia</th>
+                        <th>Altitud</th>
+                        <th>Temperatura Media</th>
+                        <th>Precipitaciones</th>
+                        <th>Temperatura mínima</th>
+                        <th>Hora Temperatura Mínima</th>
+                        <th>Temperatura Máxima</th>
+                        <th>Hora Temperatura Máxima</th>
+                        <th>Dir</th>
+                        <th>Velocida Media</th>
+                        <th>Racha</th>
+                        <th>Hora Racha</th>        
+                     </tr>
+                </thead>
+                <tbody id="res">
+                    
+                </tbody>
+            </table>
+        </div>
+
+<script type="text/javascript">
+var resultado = document.getElementById("info");
+
+function ajax_get_json()
+{
+    var xmlhttp;
+    if(window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+        }else{
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.onreadystatechange = function(){
+            if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                var datos = JSON.parse(xmlhttp.responseText);
+                if(resultado.innerHTML === ""){
+                for(var i in datos){
+                    resultado.innerHTML += i + ": " + datos[i] + "<br/>"
+           }
+        }
+        }
+        } 
+xmlhttp.open("GET" ,"http://127.0.0.1:8887/abril.json", true);
+xmlhttp.send();
+  }
+ 
+</script>
+
+</div>
+<footer>
+    <p>Jesús Bejo Santiago <br> Desenvolvemento de Aplicacións Multiplataforma <br> Linguaxes de Marcas e Sistemas de Xestión de Información</p>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+<!-- 
+   ___                     ______      _       _    _      _     
+  |_  |                    | ___ \    (_)     | |  | |    | |    
+    | | ___  ___ _   _ ___ | |_/ / ___ _  ___ | |  | | ___| |__  
+    | |/ _ \/ __| | | / __|| ___ \/ _ \ |/ _ \| |/\| |/ _ \ '_ \ 
+/\__/ /  __/\__ \ |_| \__ \| |_/ /  __/ | (_) \  /\  /  __/ |_) |
+\____/ \___||___/\__,_|___/\____/ \___| |\___/ \/  \/ \___|_.__/ 
+                                     _/ |                        
+                                    |__/                         
+ -->
+</HTML>

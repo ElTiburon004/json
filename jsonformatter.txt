@@ -1,0 +1,83 @@
+﻿{
+  "banco": {
+    "nome": "banco simpatico gallego",
+    "codigo": "4444",
+    "abreviatura": "BSG",
+    "presidente": {
+      "nome": "Federico",
+      "apellido1": "López",
+      "apellido2": "Graña"
+    },
+    "creacion": {
+      "día": 10,
+      "mes": 12,
+      "ano": 1979
+    },
+    "sucursais": [
+      {
+        "codigo": "0123",
+        "superficie": 210
+      },
+      {
+        "codigo": "0032",
+        "superficie": 323
+      }
+    ],
+    "empregados": [
+      {
+        "codigo": "EA44as",
+        "NSS": 112233445566,
+        "nome": "Alicia",
+        "apelido1": "Bueno",
+        "apelido2": "Abel",
+        "sucursal": "0123",
+        "cargo": "Director"
+      },
+      {
+        "codigo": "EO45ai",
+        "NSS": 992233445599,
+        "nome": "Lois",
+        "apelido1": "Casado",
+        "apelido2": "Flores",
+        "sucursal": "0123",
+        "cargo": "Interventor"
+      },
+      {
+        "codigo": "EU55pi",
+        "NSS": 888833448899,
+        "nome": "Sabela",
+        "apelido1": "Ferreiro",
+        "apelido2": "Vila",
+        "sucursal": "0123",
+        "cargo": null
+      },
+      {
+        "codigo": "EE46as",
+        "NSS": 555888445566,
+        "nome": "Candela",
+        "apelido1": "Vigo",
+        "apelido2": "Pérez",
+        "sucursal": "0123",
+        "cargo": "Director"
+      },
+      {
+        "codigo": "EO66ai",
+        "NSS": 323232445599,
+        "nome": "Mauro",
+        "apelido1": "Pena",
+        "apelido2": "Domínguez",
+        "sucursal": "0123",
+        "cargo": "Interventor"
+      },
+      {
+        "codigo": "EA66pi",
+        "NSS": 111833448111,
+        "nome": "Xurxo",
+        "apelido1": "Chao",
+        "apelido2": "Vila",
+        "sucursal": "0123",
+        "cargo": "outros"
+      }
+    ]
+  }
+}

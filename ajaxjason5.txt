@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <style> .box {float: left;width: 150px; height: 150px; margin: 10px; color: #ddd;padding: 10px;} </style> 
+   </head>
+    <body>
+     <h2>Ejemplo AJAX y JSON</h2> 
+     <div id="contenido">
+      <button type="button" onclick="loadJSON()">Cargar JSON</button> 
+      </div> 
+      <script> function loadJSON() { 
+          var xhttp = new XMLHttpRequest(); xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) { DibujarContenido(this.responseText); } }; xhttp.open("GET", "colores.json", true); xhttp.send(); } function DibujarContenido(datos) { //datos en formato JSON var objeto = JSON.parse(datos); var html=""; 
+          //recorreomos el objeto y creamos el html necesario
+           for (i = 0; i < objeto.colores.length; i++) { html=html + "<div class='box' style='background:" + objeto.colores[i].codificacion.hex + ";'>"; html=html + objeto.colores[i].color +"<br/>"; html=html + objeto.colores[i].categoria +"<br/>"; html=html + objeto.colores[i].tipo +"<br/>"; html=html + "rgba:" +
+          objeto.colores[i].codificacion.rgba +"<br/>";
+           html=html + "hex:" + objeto.colores[i].codificacion.hex; html=html + "</div>"; } 
+           //volcamos el html en su sitio del DOM
+            document.getElementById("contenido").innerHTML = html; } 
+            </script>
+             </body>
+              </html>
